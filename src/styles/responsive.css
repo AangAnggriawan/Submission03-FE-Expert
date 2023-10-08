@@ -1,0 +1,110 @@
+@media screen and (min-width: 650px) {
+  .app-bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+ 
+  .app-bar .app-bar__brand h1 {
+    font-size: 1.5em;
+  }
+ 
+  .app-bar .app-bar__menu {
+    display: none;
+  }
+ 
+  .app-bar .app-bar__navigation {
+    position: static;
+    width: 100%;
+  }
+ 
+  .app-bar .app-bar__navigation ul li {
+    display: inline-block;
+  }
+ 
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+  }
+
+  #bookingResto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #bookingResto .booking {
+    width: 300px;
+    border: 1px solid #32B768;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .resto-item__content h3 {
+    margin-left: 1rem;
+  }
+  
+  .resto-item__content a.view {
+    margin-right: 1.3rem;
+  }
+
+}
+ 
+@media screen and (min-width: 800px) {
+  .app-bar .app-bar__brand h1 {
+    font-size: 2em;
+  }
+
+  #resto { 
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+   }
+   
+   .likeElement {
+     border: 1px solid;
+     width: 300px;
+     border-radius: 8px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+   }
+
+   img.resto__poster {
+    width: 50%;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+}
+ 
+@media screen and (min-width: 850px) {
+  .movies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  img.resto__poster {
+    width: 40%;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+}
+ 
+@media screen and (min-width: 1200px) {
+  .movies {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+ 
+@media screen and (min-width: 1600px) {
+  .movies {
+      grid-template-columns: repeat(5, 1fr);
+  }
+}

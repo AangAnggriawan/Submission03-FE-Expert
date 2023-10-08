@@ -1,0 +1,470 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+ 
+ 
+/*
+  AppBar
+*/
+ 
+.skip-link {
+  position: absolute;
+  left: 0;
+  margin-top: 5rem;
+  padding: 8px;
+  width: 200px;
+  height: 44px;
+  background-color: #000000;
+  color: white;
+  z-index: 10000;
+  top: -1000px;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: #32B768;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+ 
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar__menu button {
+  color: white;
+}
+ 
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  width: 45px;
+  cursor: pointer;
+}
+ 
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+ 
+.app-bar .app-bar__brand h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 22px;
+  user-select: none;
+}
+ 
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: #32B768;
+  overflow: hidden;
+}
+ 
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+ 
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  min-height: 45px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+ 
+ 
+/*
+  Main Content
+*/
+ 
+section#hero {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  background-image: url('../public/hero/hero2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+}
+
+section#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna gelap dengan tingkat transparansi */
+}
+
+section#hero h1 {
+  z-index: 999;
+  color: white;
+  font-size: 50px;
+}
+
+section#hero p {
+  color: white;
+  z-index: 999;
+}
+
+section#hero button {
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  background-color: #32B768;
+  height: 44px;
+  color: white;
+  margin-top: 2rem;
+  z-index: 999;
+}
+
+#bestOftheFood .container {
+  padding: 3rem;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*
+  resto Item
+*/
+#restoList {
+  display: flex;
+  overflow: auto;
+  padding: 3rem;
+  gap: 2rem;
+}
+
+.resto-item {
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 250px;
+}
+
+.resto-item__header img {
+  width: 200px;
+  border-radius: 8px;
+  height: 200px;
+}
+
+.resto-item__content {
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+.resto-item__content h3 a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.judulBooking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+#bookingResto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#bookingResto .booking {
+  width: 90%;
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-item__header {
+  width: 100%;
+}
+
+.booking-item__header img {
+  width: 90%;
+  border-radius: 8px;
+  height: 200px;
+}
+
+.booking-item__header {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resto-item__content {
+  padding: 0.5rem;
+  margin-top: -1rem;
+}
+
+.resto-item__header__rating {
+  margin-top: 10px;
+  margin-left: 3rem;
+  width: 100%;
+}
+img.resto__poster {
+  width: 97%;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.resto-item__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.resto-item__content h3 {
+  margin-left: 1.5rem;
+}
+
+.resto-item__content a.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+  text-decoration: none;
+  background-color: #32B768;
+  width: 70px;
+  height: 45px;
+  border-radius: 8px;
+  color: white;
+}
+
+#restoDetail {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+#restoDetail h2 {
+  margin-left: 0;
+}
+
+.resto__desc {
+  margin-top: 2rem;
+}
+
+/* Gaya untuk tabel minuman */
+#drink-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#drink-table th, #drink-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+#drink-table th {
+  background-color: #32B768;
+  color: white;
+}
+
+/* Gaya untuk tabel makanan */
+#food-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#food-table th, #food-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+#food-table th {
+  background-color: #32B768;
+  color: white;
+}
+
+/* Gaya untuk ulasan pelanggan */
+#customer-reviews {
+  margin-top: 20px;
+}
+
+#customer-reviews h2 {
+  margin-top: 4rem;
+  font-size: 18px;
+  margin-left: 1.2rem;
+  text-align: center;
+
+}
+
+#reviews-list {
+  width: 100%;
+  border-radius: 8px;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#reviews-list li {
+  border: 1px solid #ddd;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#reviews-list strong {
+  font-weight: bold;
+  color: #333; /* Warna teks yang lebih gelap */
+}
+
+#reviews-list p {
+  color: #666; /* Warna teks yang lebih terang */
+}
+
+#reviews-list li:hover {
+  transform: scale(1.02); /* Efek zoom saat dihover */
+  transition: transform 0.3s ease;
+}
+
+/* Gaya untuk judul ulasan */
+.review-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Gaya untuk tanggal ulasan */
+.review-date {
+  font-size: 12px;
+  color: #888;
+}
+
+
+/*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+
+.contentLike {
+  width: 100%;
+  overflow: hidden;
+}
+
+.contentLike h2 {
+  padding: 2rem;
+  text-align: center;
+}
+
+#resto { 
+ display: flex;
+ justify-content: center;
+ gap: 1rem;
+ flex-wrap: wrap;
+}
+
+.likeElement {
+  width: 97%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*
+  Footer
+*/
+
+footer {
+  padding: 16px;
+  background-color: #32B768;
+  margin-top: 3rem;
+  min-height: 45px;
+  height: 45px;
+}
+ 
+footer p {
+  text-align: center;
+  color: #000000;
+  height: 45px;
+}
+ 
+footer p a {
+  color: white;
+  text-decoration: none;
+  padding: 13px;
+ 
+}
